@@ -1,0 +1,11 @@
+{
+  "name": "bank-auth-server",
+  "version": "1.0.0",
+  "description": "A server for the account information for bank users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Palacio",
+  "license": "ISC"
+}
