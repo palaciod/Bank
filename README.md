@@ -22,7 +22,7 @@ replicas of the designs I like. I think this is great practice to improve my fro
 ## Languages: 
 1. JavaScript
 
-### What will the app do?
+## What will the app do?
 1. The app can authenticate users
 2. Allow users to record their financial history
 3. Show user's financial history on charts and split them into catagories. 
