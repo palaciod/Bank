@@ -10,14 +10,21 @@ import {
 
 import { Animation } from '@devexpress/dx-react-chart';
 
+
+//Sample data
 const data = [
-  { year: '1950', population: 2.525 },
-  { year: '1960', population: 3.018 },
-  { year: '1970', population: 3.682 },
-  { year: '1980', population: 4.440 },
-  { year: '1990', population: 5.310 },
-  { year: '2000', population: 6.127 },
-  { year: '2010', population: 6.930 },
+  { month: 'JAN', balance: 5000 },
+  { month: 'FEB', balance: 8000 },
+  { month: 'MAR', balance: 25000 },
+  { month: 'APR', balance: 90000 },
+  { month: 'MAY', balance: 65000 },
+  { month: 'JUN', balance: 45000 },
+  { month: 'JUL', balance: 15000 },
+  { month: 'AUG', balance: 55000 },
+  { month: 'SEP', balance: 95000 },
+  { month: 'OCT', balance: 73250 },
+  { month: 'NOV', balance: 8000 },
+  { month: 'DEC', balance: 35000 }
 ];
 
 export default class BarChart extends React.PureComponent {
@@ -33,16 +40,16 @@ export default class BarChart extends React.PureComponent {
     const { data: chartData } = this.state;
 
     return (
-      <Paper style={{backgroundColor:"#f5f5fd"}}>
+      <Paper style={{backgroundColor:"#f5f5fd", padding:"20px"}}>
         <Chart
           data={chartData}
         >
           <ArgumentAxis />
-          <ValueAxis max={7} />
+          <ValueAxis max={12} />
 
           <BarSeries
-            valueField="population"
-            argumentField="year"
+            valueField="balance"
+            argumentField="month"
             color="black"
           />
           <Animation />

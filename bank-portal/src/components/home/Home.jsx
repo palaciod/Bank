@@ -1,13 +1,19 @@
 import React from "react";
 import {withStyles} from "@material-ui/core/styles";
-import Dashboard from "./Dashboard";
+import Header from "./Header";
 import TransferOptions from "./TransferOptions";
-import BarChart from "./BarChart";
+import Balance from "./Balance";
+import History from "./History";
+import LeftSideMenu from "../general/LeftSideMenu";
+import RightSidePanel from "../rightPanel/RightSidePanel";
 const useStyles = theme => ({
+    sectionWithMenu:{
+        display:"inline-flex"
+    },
     section:{
         width:"1110px",
         backgroundColor:"#f5f5fd",
-        margin:"auto",
+        display:"block",
         fontFamily: "acumin-pro, sans-serif",
         fontWeight: "400",
         fontStyle: "normal",
@@ -17,6 +23,12 @@ const useStyles = theme => ({
         margin:"auto",
         marginTop: "40px",
         textAlign:"center"
+    },
+    balanceSection:{
+        marginTop:"40px"
+    },
+    historySection:{
+        marginTop: "30px"
     }
 });
 
@@ -24,12 +36,23 @@ class Home extends React.Component {
     render(){
         const {classes} = this.props;
         return(
-            <div className={classes.section}>
-                <Dashboard/>
-                <div className={classes.transfers}>
-                    <TransferOptions />
+            <div className={classes.sectionWithMenu}>
+                <LeftSideMenu />
+                <div className={classes.section}>
+                    <Header title="Dashboard" subTitle="Transfer updates:"/>
+                    <div className={classes.transfers}>
+                        <TransferOptions />
+                    </div>
+                    <div className={classes.balanceSection}>
+                        <Balance balance={"15000"}/>
+                    </div>
+
+                    <div className={classes.historySection}>
+                        <History />
+                    </div>
                 </div>
-                <BarChart />
+                <RightSidePanel/>
+
             </div>
         );
     }

@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme) => ({
         display:"block",
         borderRadius:"60px",
         padding:"10px",
-        textAlign:"left"
+        textAlign:"left",
+        boxShadow:"1px 10px 20px lightgrey;"
     },
     text:{
         color:"grey",

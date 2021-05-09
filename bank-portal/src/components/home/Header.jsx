@@ -14,15 +14,16 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-function Dashboard(){
+function Header(props){
     const classes = useStyles();
     return(
         <div >
-            <div className={classes.header}>Dashboard</div>
-            <div className={classes.subHeader}>Transfer updates: </div>
+            <div className={classes.header}>{props.title}</div>
+            <div className={classes.subHeader}> {props.subTitle}</div> 
+            {/* Transfer updates: */}
         </div>
     );
 }
 
-export default Dashboard;
+export default Header;
 
